@@ -1,0 +1,44 @@
+.banner {
+    width: 100%;
+    max-width: 1366px;
+    display: flex;
+}
+
+.top-save {
+    width: 100%;
+    height: 700px;
+}
+
+.sale-left {
+    width: 30%;
+    padding-right: 10px;
+}
+
+.sale-right {
+    width: 90%;
+    height: 100%;
+}
+
+.header-top-save {
+    height: 10%;
+    width: 100%;
+    display: flex;
+}
+
+.text-top-save {
+    width: 60%;
+    height: 100%;
+}
+
+.clock-top-save {
+    width: 40%;
+    height: 100%;
+    background-color: #2ac1c1;
+}
+
+.main-top-save {
+    padding-top: 10px;
+    width: 100%;
+    height: 90%;
+    box-sizing: border-box;
+}
