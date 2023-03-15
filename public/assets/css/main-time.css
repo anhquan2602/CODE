@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@100&display=swap');
+body{
+    font-family: "Public Sans",sans-serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main-time .box{
+    position: relative;
+    margin-top: 40px;
+    max-width: 222px;
+    width: 100%;
+    height: 347px;
+    background: linear-gradient(149.8deg, #f6f5f2 17.21%, #fbfaf9 79.21%);
+    border-radius: 5px;
+    border: none;
+}
+.main-time .box img{
+    transition:  0.3s ease-in-out;
+
+
+}
+.main-time .box .product-option{
+    position: absolute;
+    width: 138px;
+    height: 45px;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0 8px rgb(34 34 34 / 12%);
+    border-radius: 5px;
+    top: 130px;
+    left: 45px;
+    transform: translate(0,10px);
+    transition:  0.3s ease-in-out;
+    opacity: 0;
+
+    
+}
+.main-time .box .product-option i{
+    cursor: pointer;
+    height: 20px;
+    width: 40px;
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-time .box .product-option .fa-code-compare{
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.main-time .box:hover img{
+    transform: scale(1.2);
+}
+.main-time .box:hover .product-option{
+    transform:translate(0,0);
+    opacity: 1;
+}
+.main-time .time-top{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    justify-content: space-between;
+}
+.time-top h1{
+    display: inline-block;
+}
+.main-time .box .content .checked{
+    color: orange;
+}
+.box img{
+    width: 40%;
+    height: 40%;
+    object-fit: cover;
+    object-position: center;
+    margin-top: 30px;
+    margin-left: 70px;
+}
+.main-time .box .content{
+    margin-left: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.main-time .box .content button{
+    position: relative;
+    height: 40px;
+    width: 193px;
+    border: none;
+    font-size: calc(14px + (15 - 14) * ((100vw - 320px) / (1920 - 320)));
+    margin-top: 10px;
+    color: #4a5568;
+    border-radius: 50px;
+    font-weight: 500;
+    background-color: #ffffff;
+}
+.main-time .box .content .add i{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f8f6;
+    color: #d99f46;
+    font-size: 10px;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    top: 2px;
+    right: 4px;
+}
+
+
+

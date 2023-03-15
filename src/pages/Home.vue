@@ -1,831 +1,387 @@
 <script setup>
+import MainSale from './../components/componentsHome/MainSale.vue'
+import MainAdv from './../components/componentsHome/MainAdv.vue'
+import MainContentBox from './../components/componentsHome/MainContentBox.vue'
+import MainContentRightBanner from './../components/componentsHome/MainContentRightBanner.vue'
+import MainSupperSale from './../components/componentsHome/MainSupperSale.vue'
+import MainCartCream from './../components/componentsHome/MainCartCream.vue'
+
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function () {
+
+    // Get today's date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 120 * 700 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = "Expires in :" + days + ": " + hours + ": "
+        + minutes + ": " + seconds;
+
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+}, 1000);
+
+const listFood = {
+
+}
+
 </script>
 
 <template>
-  
-    <div class="kartshop">
-       
+    <div>
+
         <div class="main">
-            <div class="wrap-main">
-                <div class="banner">
-                    <div class="banner-right">
-                        <div class="image-right">
-                            <img src=".assets/img/image/1.jpg" alt="">
+            <div class="main-space session-box " >
+                <div class="main-link">
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            <i class="fa-solid fa-bars-staggered"></i>
+
+                            All Categories</button>
+
+                        <div class="dropdown-content">
+                            <div class="Categorie">
+                                <ul>
+                                    <li> <img src="/assets/img/main-categori/vegetable.svg" alt="">
+                                        Vegetables & Fruit<i class="fa-solid fa-chevron-right"></i></li>
+                                    <li><img src="/assets/img/main-categori/cup.svg" alt="">Beverages<i
+                                            class="fa-solid fa-chevron-right"></i></li>
+                                    <li><img src="/assets/img/main-categori/breakfast.svg" alt="">Meats & Seafood<i
+                                            class="fa-solid fa-chevron-right"></i></li>
+                                    <li><img src="/assets/img/main-categori/frozen.svg" alt="">Frozen Foods<i
+                                            class="fa-solid fa-chevron-right"></i></li>
+                                    <li><img src="/assets/img/main-categori/grocery.svg" alt="">Biscuits & Snacks<i
+                                            class="fa-solid fa-chevron-right"></i></li>
+                                    <li><img src="/assets/img/main-categori/biscuit.svg" alt="">Grocery & Staples<i
+                                            class="fa-solid fa-chevron-right"></i></li>
+                                </ul>
+                            </div>
                         </div>
-                        <h6>Exclusive offer
-                            <span>30% Off</span>
-                        </h6>
-                        <div class="wrap-h1">
-                            <h1>STAY HOME & DELIVERED YOUR DAILY NEEDS</h1>
+                    </div>
+                    <div class="main-link-menu">
+                        <div class="dropdown Home">
+
+                            <a href="">Home<i class="fa-solid fa-chevron-down"></i></a>
+
+
+                            <div class="dropdown-content "
+                                style="margin-top: -40px;margin-left: -10px;height: 450px;width: 200px;">
+                                <div class="Categorie">
+                                    <ul>
+                                        <li> Kartshop</li>
+                                        <li>Sweetshop</li>
+                                        <li>Organic</li>
+                                        <li>Supershop</li>
+                                        <li>Classic shop</li>
+                                        <li>Furniture</li>
+                                        <li>Search Oriented</li>
+                                        <li>Category Focus</li>
+                                        <li>Fashion</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <div class="wrap-p">
-                            <p>Vegetables contain many vitamins and minerals that are good for your health. </p>
+                        <!-- 1 -->
+                        <div class="dropdown">
+
+                            <a href="">Shop<i class="fa-solid fa-chevron-down"></i></a>
+
+
+
+                            <div class="dropdown-content "
+                                style="margin-top: -40px;margin-left: -10px;width: 250px;height: 400px;">
+                                <div class="Categorie">
+                                    <ul>
+                                        <li> Shop Category Slider</li>
+                                        <li>Shop Category Sidebar</li>
+                                        <li>Shop Banner</li>
+                                        <li>Shop Left Sidebar</li>
+                                        <li>Shop List</li>
+                                        <li>Shop Right Sidebar</li>
+                                        <li>Shop Right Sidebar</li>
+                                        <li>Shop Top Filter</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <button>Shop Now
-                            <i class="fa-solid fa-arrow-right"></i>        
+                        <!-- 1 -->
+                        <div class="dropdown">
+
+                            <a href="">Product<i class="fa-solid fa-chevron-down"></i></a>
+
+
+
+                            <div class="dropdown-content "
+                                style="margin-top: -40px;margin-left: -10px;height: 250px;width:250px;">
+                                <div class="Categorie">
+                                    <ul>
+                                        <li> Product 4 Image</li>
+                                        <li>Product Thumbnail</li>
+                                        <li>Product Bundle</li>
+                                        <li>Product Slider</li>
+                                        <li>Product Sticky</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 1  chua lam-->
+                        <div class="dropdown">
+
+                            <a href="">Mega Menu<i class="fa-solid fa-chevron-down"></i></a>
+
+
+
+                            <div class="dropdown-content " style="margin-top: -40px;margin-left: -10px;">
+                                <div class="Categorie">
+                                    <ul>
+                                        <li> Kartshop</li>
+                                        <li><img src="/assets/img/main-categori/cup.svg" alt="">Beverages<i
+                                                class="fa-solid fa-chevron-right"></i></li>
+                                        <li><img src="/assets/img/main-categori/breakfast.svg" alt="">Meats & Seafood<i
+                                                class="fa-solid fa-chevron-right"></i></li>
+                                        <li><img src="/assets/img/main-categori/frozen.svg" alt="">Frozen Foods<i
+                                                class="fa-solid fa-chevron-right"></i></li>
+                                        <li><img src="/assets/img/main-categori/grocery.svg" alt="">Biscuits & Snacks<i
+                                                class="fa-solid fa-chevron-right"></i></li>
+                                        <li><img src="/assets/img/main-categori/biscuit.svg" alt="">Grocery & Staples<i
+                                                class="fa-solid fa-chevron-right"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 1 -->
+                        <div class="dropdown">
+
+                            <a href="">Blog<i class="fa-solid fa-chevron-down"></i></a>
+
+
+
+                            <div class="dropdown-content "
+                                style="margin-top: -40px;margin-left: -10px;height: 180px;width: 150px    ;">
+                                <div class="Categorie">
+                                    <ul>
+                                        <li> Blog Detail</li>
+                                        <li>Blog Grid</li>
+                                        <li>Blog List</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 1 -->
+                        <div class="dropdown">
+
+                            <div class="page">
+                                <label for="">New</label>
+                                <a href="">Pages<i class="fa-solid fa-chevron-down"></i></a>
+
+
+                            </div>
+
+
+                            <div class="dropdown-content pagedr"
+                                style="margin-top: -30px;margin-left: -10px; height: 500px;width: 200px;">
+                                <div class="Categorie">
+                                    <ul>
+                                        <li> Email Template</li>
+                                        <li>Invoice Template</li>
+                                        <li>404</li>
+                                        <li>About Us</li>
+                                        <li>Cart</li>
+                                        <li>Contact</li>
+                                        <li>Checkout</li>
+                                        <li>Coming Soon</li>
+                                        <li>Compare</li>
+                                        <li>Faq</li>
+                                        <li>Order Success</li>
+                                        <li>Order Tracking</li>
+                                        <li>OTP</li>
+                                        <li>Search </li>
+                                        <li>User Dashboard</li>
+                                        <li>Wishlist</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 1 -->
+                        <div class="dropdown">
+
+                            <a href="">Seller<i class="fa-solid fa-chevron-down"></i></a>
+
+
+
+                            <div class="dropdown-content "
+                                style="margin-top: -40px;margin-left: -10px;width: 200px;height: 280px;">
+                                <div class="Categorie">
+                                    <ul>
+                                        <li> Become a Seller</li>
+                                        <li> Seller Dashboardr</li>
+                                        <li> Seller Detail</li>
+                                        <li> Seller Detail 2</li>
+                                        <li> Seller Grid</li>
+                                        <li> Seller Grid 2</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 1 -->
+
+                    </div>
+                    <div class="deal">
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="feather feather-zap">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                            </svg>
+                            Deal Today
                         </button>
                     </div>
-                    <div class="banner-left">
-                        <div class="banner-top">
-                            <div class="image-top">
-                                <img src=".assets/img/image/2.jpg" alt="">
-                                <h2>45% Off</h2>
-                                <h3>Nut Colection</h3>
-                                <p>We deliver organic vegetables & fruits</p>
-                                <a href="">
-                                    Shop Now
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="banner-bot">
-                            <div class="image-bot">
-                                <img src=".assets/img/image/3.jpg" alt="">
-                                <h2>Healthy Food</h2>
-                                <h3>Organic Market</h3>
-                                <p>Start your daily shopping with some...</p>
-                                <a href="">
-                                    Shop Now
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+
+
+
                 </div>
-                <div class="banner-bottom">
-                    <div class="banner-detail">
-                        <div class="image-banner">
-                            <img src=".assets/img/image/4.jpeg" alt="">
-                            <div class="text-banner">
-                                <div class="text-h6">
-                                    <h6>5% Off</h6>
-                                </div>
-                                <div class="text-h5">
-                                    <h5>Hot Deals on New item</h5>
-                                </div>
-                                <div class="text-h6" style="color:gray;">
-                                    Daily Essentinal Eggs & Daily
-                                </div>
-                            </div>
-                            <a href="">
-                                Shop Now
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </a>
+                <div class="main-mean">
+                    <div class="mean-left">
+                        <img src="/assets/img/main-mean/images.jfif" alt="">
+                        <div class="describe">
+                            <p
+                                style="font-size: 14px;
+                                                                    letter-spacing: 0.1px;color: #ffffff;font-weight: 700;font-family: bold;">
+                                Fresh
+                                &
+                                Delicious
+                            </p>
+                            <h2 style="font-size: calc(25px + (38 - 25) * ((100vw - 320px) / (1920 - 320)));font-weight: 700;line-height: 1;
+                                                                    text-transform: capitalize;color: #ffffff;">Fresh Bread
+                            </h2>
+                            <p style="color: white;font-weight: 700;">Bento box burritos cherry bomb pepper dark and stormy
+                                with ginger..</p>
+                            <p style="color: white;font-weight: 700;">Shop Now</p>
+                        </div>
+                    </div>
+                    <div class="mean-mid">
+                        <img src="/assets/img/main-mean/Delicious_Cookies_For_Your_Morning_Brew.png" alt="">
+                        <div class="describe">
+                            <h6 style="    font-size: 14px;
+                                                                    letter-spacing: 0.1px;
+                                                                    color: #4a5568;">
+                                Exclusive offer
+                                <span
+                                    style="border-radius: 50px;
+                                                                        color: #ff4f4f;    background: linear-gradient(90deg, rgba(255,114,114,0.15) 0%, rgba(255,114,114,0) 79%);    font-weight: 500;
+                                                padding: calc(6px + (10 - 6) * ((100vw - 320px) / (1920 - 320))) calc(8px + (16 - 8) * ((100vw - 320px) / (1920 - 320)));">30%
+                                    Off</span>
+                            </h6>
+
+                            <h1
+                                style="line-height: calc(29px + (63 - 29) * ((100vw - 320px) / (1920 - 320)));opacity: 1.5;font-size: calc(25px + (42 - 25) * ((100vw - 320px) / (1920 - 320)));">
+                                WE'LL MAKE
+                                <span class="name" style="    font-weight: bold;
+                                                                        color: #d99f46;">HANDMADE</span>
+                                <span> YOUR
+                                </span>
+                                <span> SWEET
+                                </span>
+
+                            </h1>
+
+                            <p
+                                style="color: #4a5568;
+                                                                    letter-spacing: 0.8px;
+                                                                    line-height: calc(19px + (27 - 19) * ((100vw - 320px) / (1920 - 320)));font-size: 14px;">
+                                Earl
+                                grey latte Thai basil curry grains alfalfa sprouts banana bread ginger...</p>
+                            <button
+                                style="background: #d99f46;    padding: calc(7px + (14 - 7) * ((100vw - 320px) / (1920 - 320))) calc(14px + (32 - 14) * ((100vw - 320px) / (1920 - 320)));
+                                                                    font-weight: 500;border: none;
+                                                font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));border-radius: 5px;">Shop
+                                Now</button>
                         </div>
 
                     </div>
-
-                    <!-- two  -->
-                    <div class="banner-detail">
-                        <div class="image-banner">
-                            <img src=".assets/img/image/5.jpeg" alt="">
-                            <div class="text-banner">
-                                <div class="text-h6">
-                                    <h6>5% Off</h6>
-                                </div>
-                                <div class="text-h5">
-                                    <h5>Buy More & Save More</h5>
-                                </div>
-                                <div class="text-h6" style="color:gray;">
-                                    Fresh Vegetables
-                                </div>
-                            </div>
-                            <a href="">
-                                Shop Now
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                        </div>
-
-                    </div>
-
-                    <!-- three  -->
-                    <div class="banner-detail">
-                        <div class="image-banner">
-                            <img src=".assets/img/image/6.jpeg" alt="">
-                            <div class="text-banner">
-                                <div class="text-h6">
-                                    <h6>5% Off</h6>
-                                </div>
-                                <div class="text-h5">
-                                    <h5>Organic Meat Prepared</h5>
-                                </div>
-                                <div class="text-h6" style="color:gray;">
-                                    Delivered to Your Home
-                                </div>
-                            </div>
-                            <a href="">
-                                Shop Now
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                        </div>
-
-                    </div>
-
-                    <!-- four  -->
-                    <div class="banner-detail">
-                        <div class="image-banner">
-                            <img src=".assets/img/image/7.jpeg" alt="">
-                            <div class="text-banner">
-                                <div class="text-h6">
-                                    <h6>5% Off</h6>
-                                </div>
-                                <div class="text-h5">
-                                    <h5>Buy More & Save More</h5>
-                                </div>
-                                <div class="text-h6" style="color:gray;">
-                                    Nuts & Snacks
-                                </div>
-                            </div>
-                            <a href="">
-                                Shop Now
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </a>
+                    <div class="mean-right">
+                        <img src="/assets/img/main-mean/3437941.webp" alt="">
+                        <div class="describe">
+                            <p
+                                style="font-size: 14px;
+                                                                    letter-spacing: 0.1px;color: #ffffff;font-weight: 700;font-family: bold;">
+                                Fresh
+                                &
+                                Delicious
+                            </p>
+                            <h2 style="font-size: calc(25px + (38 - 25) * ((100vw - 320px) / (1920 - 320)));font-weight: 700;line-height: 1;
+                                                                    text-transform: capitalize;color: #ffffff;">Fresh Bread
+                            </h2>
+                            <p style="color: white;font-weight: 700;">Peanut butter crunch chia seeds red parsley basil
+                                overflowing..</p>
+                            <p style="color: white;font-weight: 700;">Shop Now</p>
                         </div>
                     </div>
 
-                    <!-- top save today  -->
                 </div>
-                <div class="sale-main">
-                    <div class="sale-left">
-                        <div class="nav-category">
-                            <div class="title-nav-cate">
-                                <h3>Category</h3>
-                            </div>
-                            <div class="main-nav-cate">
-                                <ul>
-                                    <li>
-                                        <div class="wrap-menu-detail">
-                                            <i class="fa-solid fa-carrot"></i>
-                                            <h5>vegetables</h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="wrap-menu-detail">
-                                            <i class="fa-solid fa-carrot"></i>
-                                            <h5>vegetables</h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="wrap-menu-detail">
-                                            <i class="fa-solid fa-carrot"></i>
-                                            <h5>vegetables</h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="wrap-menu-detail">
-                                            <i class="fa-solid fa-carrot"></i>
-                                            <h5>vegetables</h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="wrap-menu-detail">
-                                            <i class="fa-solid fa-carrot"></i>
-                                            <h5>vegetables</h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="wrap-menu-detail">
-                                            <i class="fa-solid fa-carrot"></i>
-                                            <h5>vegetables</h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="wrap-menu-detail">
-                                            <i class="fa-solid fa-carrot"></i>
-                                            <h5>vegetables</h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="wrap-menu-detail">
-                                            <i class="fa-solid fa-carrot"></i>
-                                            <h5>vegetables</h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="wrap-menu-detail">
-                                            <i class="fa-solid fa-carrot"></i>
-                                            <h5>vegetables</h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="wrap-menu-detail">
-                                            <i class="fa-solid fa-carrot"></i>
-                                            <h5>vegetables</h5>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="footer-nav-cate">
-                                <ul>
-                                    <li>
-                                        <h5>Value of the day</h5>
-                                    </li>
-                                    <li>
-                                        <h5>Value of the day</h5>
-                                    </li>
-                                    <li>
-                                        <h5>Value of the day</h5>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sale-right">
-                        <div class="top-save">
-                            <div class="header-top-save">
-                                <div class="text-top-save">
-                                    <h4>Top Save Today</h4>
-                                    <span>---------</span>
-                                </div>
-                                <div class="clock-top-save">
-                                </div>
-                            </div>
-                            <div class="main-top-save">
-                                <div class="list-product">
-                                    <div class="product">
-                                        <div class="image-product">
-                                            <img src=".assets/img/image/pro1.png" alt="">
-                                        </div>
-                                        <div class="detail-product">
-                                            <div class="name-product">
-                                                <h6>Fantasy Crunchy Choco Chip Cookies</h6>
-                                            </div>
-                                            <div class="price-product">
-                                                <h5>
-                                                    <span>
-                                                    $26.5
-                                                </span> 28.58
-                                                </h5>
-                                            </div>
-                                            <div class="star-product">
-                                                <div class="rating">
-                                                    <ul>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                                    </ul>
-                                                </div>
-                                                <div class="instocl">
-                                                    <h6>In Stock</h6>
-                                                </div>
-                                            </div>
-                                            <div class="button-product">
-                                                <button>Add</button>
-                                                <div class="add-product">
-                                                    <i class="fa-solid fa-plus"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product">
-                                        <div class="image-product">
-                                            <img src=".assets/img/image/pro2.png" alt="">
-                                        </div>
-                                        <div class="detail-product">
-                                            <div class="name-product">
-                                                <h6>Fantasy Crunchy Choco Chip Cookies</h6>
-                                            </div>
-                                            <div class="price-product">
-                                                <h5>
-                                                    <span>
-                                                    $26.5
-                                                </span> 28.58
-                                                </h5>
-                                            </div>
-                                            <div class="star-product">
-                                                <div class="rating">
-                                                    <ul>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                                    </ul>
-                                                </div>
-                                                <div class="instocl">
-                                                    <h6>In Stock</h6>
-                                                </div>
-                                            </div>
-                                            <div class="button-product">
-                                                <button>Add</button>
-                                                <div class="add-product">
-                                                    <i class="fa-solid fa-plus"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product">
-                                        <div class="image-product">
-                                            <img src=".assets/img/image/pro3.png" alt="">
-                                        </div>
-                                        <div class="detail-product">
-                                            <div class="name-product">
-                                                <h6>Fantasy Crunchy Choco Chip Cookies</h6>
-                                            </div>
-                                            <div class="price-product">
-                                                <h5>
-                                                    <span>
-                                                    $26.5
-                                                </span> 28.58
-                                                </h5>
-                                            </div>
-                                            <div class="star-product">
-                                                <div class="rating">
-                                                    <ul>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                                    </ul>
-                                                </div>
-                                                <div class="instocl">
-                                                    <h6>In Stock</h6>
-                                                </div>
-                                            </div>
-                                            <div class="button-product">
-                                                <button>Add</button>
-                                                <div class="add-product">
-                                                    <i class="fa-solid fa-plus"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product">
-                                        <div class="image-product">
-                                            <img src=".assets/img/image/pro4.png" alt="">
-                                        </div>
-                                        <div class="detail-product">
-                                            <div class="name-product">
-                                                <h6>Fantasy Crunchy Choco Chip Cookies</h6>
-                                            </div>
-                                            <div class="price-product">
-                                                <h5>
-                                                    <span>
-                                                    $26.5
-                                                </span> 28.58
-                                                </h5>
-                                            </div>
-                                            <div class="star-product">
-                                                <div class="rating">
-                                                    <ul>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                                    </ul>
-                                                </div>
-                                                <div class="instocl">
-                                                    <h6>In Stock</h6>
-                                                </div>
-                                            </div>
-                                            <div class="button-product">
-                                                <button>Add</button>
-                                                <div class="add-product">
-                                                    <i class="fa-solid fa-plus"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product">
-                                        <div class="image-product">
-                                            <img src=".assets/img/image/pro5.png" alt="">
-                                        </div>
-                                        <div class="detail-product">
-                                            <div class="name-product">
-                                                <h6>Fantasy Crunchy Choco Chip Cookies</h6>
-                                            </div>
-                                            <div class="price-product">
-                                                <h5>
-                                                    <span>
-                                                    $26.5
-                                                </span> 28.58
-                                                </h5>
-                                            </div>
-                                            <div class="star-product">
-                                                <div class="rating">
-                                                    <ul>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                                    </ul>
-                                                </div>
-                                                <div class="instocl">
-                                                    <h6>In Stock</h6>
-                                                </div>
-                                            </div>
-                                            <div class="button-product">
-                                                <button>Add</button>
-                                                <div class="add-product">
-                                                    <i class="fa-solid fa-plus"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product">
-                                        <div class="image-product">
-                                            <img src=".assets/img/image/pro6.png" alt="">
-                                        </div>
-                                        <div class="detail-product">
-                                            <div class="name-product">
-                                                <h6>Fantasy Crunchy Choco Chip Cookies</h6>
-                                            </div>
-                                            <div class="price-product">
-                                                <h5>
-                                                    <span>
-                                                    $26.5
-                                                </span> 28.58
-                                                </h5>
-                                            </div>
-                                            <div class="star-product">
-                                                <div class="rating">
-                                                    <ul>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                                    </ul>
-                                                </div>
-                                                <div class="instocl">
-                                                    <h6>In Stock</h6>
-                                                </div>
-                                            </div>
-                                            <div class="button-product">
-                                                <button>Add</button>
-                                                <div class="add-product">
-                                                    <i class="fa-solid fa-plus"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product">
-                                        <div class="image-product">
-                                            <img src=".assets/img/image/pro7.png" alt="">
-                                        </div>
-                                        <div class="detail-product">
-                                            <div class="name-product">
-                                                <h6>Fantasy Crunchy Choco Chip Cookies</h6>
-                                            </div>
-                                            <div class="price-product">
-                                                <h5>
-                                                    <span>
-                                                    $26.5
-                                                </span> 28.58
-                                                </h5>
-                                            </div>
-                                            <div class="star-product">
-                                                <div class="rating">
-                                                    <ul>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                                    </ul>
-                                                </div>
-                                                <div class="instocl">
-                                                    <h6>In Stock</h6>
-                                                </div>
-                                            </div>
-                                            <div class="button-product">
-                                                <button>Add</button>
-                                                <div class="add-product">
-                                                    <i class="fa-solid fa-plus"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product">
-                                        <div class="image-product">
-                                            <img src=".assets/img/image/pro8.png" alt="">
-                                        </div>
-                                        <div class="detail-product">
-                                            <div class="name-product">
-                                                <h6>Fantasy Crunchy Choco Chip Cookies</h6>
-                                            </div>
-                                            <div class="price-product">
-                                                <h5>
-                                                    <span>
-                                                    $26.5
-                                                </span> 28.58
-                                                </h5>
-                                            </div>
-                                            <div class="star-product">
-                                                <div class="rating">
-                                                    <ul>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                                    </ul>
-                                                </div>
-                                                <div class="instocl">
-                                                    <h6>In Stock</h6>
-                                                </div>
-                                            </div>
-                                            <div class="button-product">
-                                                <button>Add</button>
-                                                <div class="add-product">
-                                                    <i class="fa-solid fa-plus"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bowse-by">
-                            <div class="header-bowse">
-                                <h2>Bowse By Categories</h2>
-                                ------<i class="fa-sharp fa-solid fa-leaf"></i>------
-                                <p>Top Categories Of The Week</p>
-                            </div>
-                            <div class="main-bowse">
-                                <div class="slide">
-                                    <div class="slide-image">
-                                        <div class="icon-slide">
-                                            <i class="fa-solid fa-carrot icon-detail"></i>
-                                            <h5>Vegetables</h5>
-                                        </div>
-                                    </div>
-                                    <div class="slide-image">
-                                        <div class="icon-slide">
-                                            <i class="fa-solid fa-mug-saucer icon-detail"></i>
-                                            <h5>Vegetables</h5>
-                                        </div>
-                                    </div>
-                                    <div class="slide-image">
-                                        <div class="icon-slide">
-                                            <i class="fa-solid fa-cow icon-detail"></i>
-                                            <h5>Vegetables</h5>
-                                        </div>
-                                    </div>
-                                    <div class="slide-image">
-                                        <div class="icon-slide">
-                                            <i class="fa-solid fa-truck-fast icon-detail"></i>
-                                            <h5>Vegetables</h5>
-                                        </div>
-                                    </div>
-                                    <div class="slide-image">
-                                        <div class="icon-slide">
-                                            <i class="fa-brands fa-apple icon-detail"></i>
-                                            <h5>Vegetables</h5>
-                                        </div>
-                                    </div>
-                                    <div class="slide-image">
-                                        <div class="icon-slide">
-                                            <i class="fa-solid fa-carrot icon-detail"></i>
-                                            <h5>Vegetables</h5>
-                                        </div>
-                                    </div>
-                                    <div class="slide-image">
-                                        <div class="icon-slide">
-                                            <i class="fa-solid fa-carrot icon-detail"></i>
-                                            <h5>Vegetables</h5>
-                                        </div>
-                                    </div>
 
-                                </div>
-                                <div class="togle">
-                                    <i class="fa-solid fa-ellipsis"></i>
-                                    <i class="fa-solid fa-ellipsis"></i>
-                                    <i class="fa-solid fa-ellipsis"></i>
-
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="banner-offer">
-                            <div class="image-banner-right">
-                                <div class="image-banner-r">
-                                    <img src=".assets/img/image/banner.jpeg" alt="">
-                                </div>
-                                <div class="text-banner-r">
-                                    <h3>50% Offer</h3>
-                                    <h4>Terty mushroom</h4>
-                                    <button>Shop Now
-                                        <i class="fa-solid fa-arrow-right"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="image-banner-left">
-                                <div class="image-banner-l">
-                                    <img src=".assets/img/image/banner2.jpeg" alt="">
-                                </div>
-                                <div class="text-banner-l">
-                                    <h3>50% Offer</h3>
-                                    <h4>Fresh MEAT</h4>
-                                    <button>Shop Now
-                                        <i class="fa-solid fa-arrow-right"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="Food-Cupboard">
-                            <div class="header-food">
-                                <h2>Food Cupboard</h2>
-                                ------<i class="fa-sharp fa-solid fa-leaf"></i>------
-                                <p>A virtual assistant collects the products from your list</p>
-                            </div>
-                            <div class="main-food">
-                                <div class="list-product">
-                                    <div class="product">
-                                        <div class="image-product">
-                                            <img src=".assets/img/image/pro1.png" alt="">
-                                        </div>
-                                        <div class="detail-product">
-                                            <div class="name-product">
-                                                <h6>Fantasy Crunchy Choco Chip Cookies</h6>
-                                            </div>
-                                            <div class="price-product">
-                                                <h5>
-                                                    <span>
-                                                    $26.5
-                                                </span> 28.58
-                                                </h5>
-                                            </div>
-                                            <div class="star-product">
-                                                <div class="rating">
-                                                    <ul>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                                    </ul>
-                                                </div>
-                                                <div class="instocl">
-                                                    <h6>In Stock</h6>
-                                                </div>
-                                            </div>
-                                            <div class="button-product">
-                                                <button>Add</button>
-                                                <div class="add-product">
-                                                    <i class="fa-solid fa-plus"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product">
-                                        <div class="image-product">
-                                            <img src=".assets/img/image/pro2.png" alt="">
-                                        </div>
-                                        <div class="detail-product">
-                                            <div class="name-product">
-                                                <h6>Fantasy Crunchy Choco Chip Cookies</h6>
-                                            </div>
-                                            <div class="price-product">
-                                                <h5>
-                                                    <span>
-                                                    $26.5
-                                                </span> 28.58
-                                                </h5>
-                                            </div>
-                                            <div class="star-product">
-                                                <div class="rating">
-                                                    <ul>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                                    </ul>
-                                                </div>
-                                                <div class="instocl">
-                                                    <h6>In Stock</h6>
-                                                </div>
-                                            </div>
-                                            <div class="button-product">
-                                                <button>Add</button>
-                                                <div class="add-product">
-                                                    <i class="fa-solid fa-plus"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product">
-                                        <div class="image-product">
-                                            <img src=".assets/img/image/pro3.png" alt="">
-                                        </div>
-                                        <div class="detail-product">
-                                            <div class="name-product">
-                                                <h6>Fantasy Crunchy Choco Chip Cookies</h6>
-                                            </div>
-                                            <div class="price-product">
-                                                <h5>
-                                                    <span>
-                                                    $26.5
-                                                </span> 28.58
-                                                </h5>
-                                            </div>
-                                            <div class="star-product">
-                                                <div class="rating">
-                                                    <ul>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                                    </ul>
-                                                </div>
-                                                <div class="instocl">
-                                                    <h6>In Stock</h6>
-                                                </div>
-                                            </div>
-                                            <div class="button-product">
-                                                <button>Add</button>
-                                                <div class="add-product">
-                                                    <i class="fa-solid fa-plus"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product">
-                                        <div class="image-product">
-                                            <img src=".assets/img/image/pro4.png" alt="">
-                                        </div>
-                                        <div class="detail-product">
-                                            <div class="name-product">
-                                                <h6>Fantasy Crunchy Choco Chip Cookies</h6>
-                                            </div>
-                                            <div class="price-product">
-                                                <h5>
-                                                    <span>
-                                                    $26.5
-                                                </span> 28.58
-                                                </h5>
-                                            </div>
-                                            <div class="star-product">
-                                                <div class="rating">
-                                                    <ul>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star fill"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></li>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                                    </ul>
-                                                </div>
-                                                <div class="instocl">
-                                                    <h6>In Stock</h6>
-                                                </div>
-                                            </div>
-                                            <div class="button-product">
-                                                <button>Add</button>
-                                                <div class="add-product">
-                                                    <i class="fa-solid fa-plus"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="banner-two">
-                            <div class="image-banner-two">
-                                <img src=".assets/img/image/banner3.jpeg" alt="">
-                            </div>
-                            <div class="text-banner-two">
-                                <div class="wrap-text-banner">
-                                    <h3>Get $3 Cashback! Min Order of $30</h3>
-                                    <h6>Use Code : GROCERY1920</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <MainAdv></MainAdv>
+                <div class="main-sale">
+                    <MainSale ></MainSale>
                 </div>
+                <div class="main-content">
+                    <div class="main-left mr10">
+                        <div class="main-time main-small mt30 w100 d-flex jcsb flex-wrap">
+                            <div class="time-top">
+                                <h1>Top Save Today
+                                </h1>
+                                <button id="demo"
+                                    style="   border: none; font-size: 14px; padding: 20px;  color: #fff;background-color:  #d99f46;padding: 8px;border-radius: 0 5px 5px 0;  ">
+                                </button>
+                            </div>
+                            <MainContentBox ></MainContentBox>
+
+
+                            <!-- 1 -->
+
+                            <!-- 1 -->
+
+                            <!-- 1 -->
+                        </div>
+                        <div class="main-cream">
+                            <h1>
+                                ALL KINDS OF CAKES
+                            </h1>
+                            <MainCartCream ></MainCartCream>
+
+
+
+                        </div>
+                    </div>
+                    <div class="main-right">
+                        <MainContentRightBanner></MainContentRightBanner>
+
+                        <!-- banner -->
+                    </div>
+
+                </div>
+                <MainSupperSale></MainSupperSale>
+
+
             </div>
+
+
         </div>
-     
-        <!-- <div onload="startTime()">
-            <h2>JavaScript Clock</h2>
 
-            <div id="txt"></div>
-        </div> -->
+
     </div>
-    <!-- <script>
-        function startTime() {
-            const today = new Date();
-            let h = today.getHours();
-            let m = today.getMinutes();
-            let s = today.getSeconds();
-            m = checkTime(m);
-            s = checkTime(s);
-            document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
-            setTimeout(startTime, 1000);
-        }
-
-        function checkTime(i) {
-            if (i < 10) {
-                i = "0" + i
-            }; // add zero in front of numbers < 10
-            return i;
-        }
-    </script> -->
 </template>

@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@100&display=swap');
+body{
+    font-family: "Public Sans",sans-serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.main-sale .banner-2{
+    background-image: url(/assets/img/main-sale/1.jpg);
+    background-size: cover;
+    background-position: center center;
+
+    width: 305px;
+    height: 183px;
+    top: 100px;
+    border-radius: 5px;
+    padding: 20px 10px;
+}
+.main-sale .banner-2:hover{
+    animation: flash  ease-in 1s;
+    cursor: pointer;
+
+}
+.main-sale{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-sale .banner-2 .content{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 80px;
+    border-left:  2px solid #ff4f4f;
+    padding: 10px;
+    
+}
